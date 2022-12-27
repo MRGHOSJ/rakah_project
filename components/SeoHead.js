@@ -4,18 +4,18 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: 'LaslesVPN',
-  siteName: 'LaslesVPN',
+  title: 'Rakah Project',
+  siteName: 'Rakah Project',
   description:
-    'Landing page VPN LaslesVPN Best VPN For Privacy, Country and Cheapest',
+    'Rakah Project is a private virtual network that has unique features and has high security.',
   // change base url of your web (without '/' at the end)
-  url: 'https://next-landing-vpn.vercel.app',
+  url: 'https://rakah-project.onrender.com',
   type: 'website',
   robots: 'follow, index',
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status 
-  image: 'https://next-landing-vpn.vercel.app/assets/card-image.png',
-  author: 'Lorem Ipsum'
+  image: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/321505334_581189620510015_6843902325397042359_n.png?stp=dst-png_p403x403&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=DeM9jfomgXYAX-BqNHy&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSGjwuT3LUUjZUDlPRPCFrM_GCEUNKa69sMcd6OUmEcsQ&oe=63D2D877',
+  author: 'BouBou - Ghost'
 };
 
 /**
