@@ -21,7 +21,8 @@ export default function OrderDialog(props) {
 
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let discordformat = /^((.+?)#\d{4})/;
-  let facebookUserFormat = /(?:https?:\/\/)?(?:www\.)?(mbasic.facebook|m\.facebook|facebook|fb)\.(com|me)\/(?:(?:\w\.)*#!\/)?(?:pages\/)?(?:[\w\-\.]*\/)*([\w\-\.]*)/ig
+  let facebookUserFormat =
+    /(?:https?:\/\/)?(?:www\.)?(mbasic.facebook|m\.facebook|facebook|fb)\.(com|me)\/(?:(?:\w\.)*#!\/)?(?:pages\/)?(?:[\w\-\.]*\/)*([\w\-\.]*)/gi;
   let orderService = () => {
     if (showDiscord || showMail || showFacebook) {
       if (showDiscord && discordUser == "") {
@@ -42,30 +43,38 @@ export default function OrderDialog(props) {
         setToast(true);
         return;
       }
-      if (mailUser != "" && !mailUser.match(mailformat)){
-        setToastMessage("You have entered an invalid email address please retry!");
+      if (showMail && !mailUser.match(mailformat)) {
+        setToastMessage(
+          "You have entered an invalid email address please retry!"
+        );
         setToastType("error");
         setToast(true);
         return;
       }
-      if (discordUser != "" && !discordUser.match(discordformat)){
-        setToastMessage("You have entered an invalid discord user please retry!");
+      if (showDiscord && !discordUser.match(discordformat)) {
+        setToastMessage(
+          "You have entered an invalid discord user please retry!"
+        );
         setToastType("error");
         setToast(true);
         return;
       }
-      
-      if (facebookUser != "" && !facebookUser.match(facebookUserFormat)){
-        setToastMessage("You have entered an invalid facebook url profile please retry!");
+
+      if (showFacebook && !facebookUser.match(facebookUserFormat)) {
+        setToastMessage(
+          "You have entered an invalid facebook url profile please retry!"
+        );
         setToastType("error");
         setToast(true);
         return;
       }
-      setToastMessage("You have just sent your order we will reach out under 24hours!");
+      setToastMessage(
+        "You have just sent your order we will reach out under 24hours!"
+      );
       setToastType("success");
       setToast(true);
-      sendEmail()
-      closeDialog()
+      sendEmail();
+      closeDialog();
     } else {
       setToastMessage(
         "You need to at least choose one of the contact method from above!"
@@ -87,27 +96,27 @@ export default function OrderDialog(props) {
   };
 
   let sendEmail = async () => {
-    let subject = "Order For " + props.dialog.service.title + " Project:" + props.dialog.title; 
+    let subject =
+      "Order For " +
+      props.dialog.service.title +
+      " Project:" +
+      props.dialog.title;
     let res = {
-      project:props.dialog.title,
-      service:props.dialog.service.title,
-      price:props.dialog.service.price,
-      currency:props.dialog.service.currency,
-    }
-    if(discordUser)
-      res.discordUser = discordUser
-    if(mailUser)
-      res.mailUser = mailUser
-    if(facebookUser)
-      res.facebookUser = facebookUser
-    if(message)
-      res.message = message
+      project: props.dialog.title,
+      service: props.dialog.service.title,
+      price: props.dialog.service.price,
+      currency: props.dialog.service.currency,
+    };
+    if (discordUser) res.discordUser = discordUser;
+    if (mailUser) res.mailUser = mailUser;
+    if (facebookUser) res.facebookUser = facebookUser;
+    if (message) res.message = message;
     let data = {
-      subject:subject,
-      html:res
-    }
-    await sendEmailForm(data)
-  }
+      subject: subject,
+      html: res,
+    };
+    await sendEmailForm(data);
+  };
 
   return (
     <>
@@ -178,21 +187,37 @@ export default function OrderDialog(props) {
                           Where can we contact you?
                         </label>
                         <div className="flex">
-                          <a onClick={() => setFacebook(!showFacebook)}>
+                          <a
+                            onClick={() => {
+                              setFacebook(!showFacebook);
+                              if (showFacebook) setFacebookUser("");
+                            }}
+                          >
                             {showFacebook ? (
                               <Facebook className="w-8 h-8 text-orange-500" />
                             ) : (
                               <Facebook className="w-8 h-8 text-black-500" />
                             )}
                           </a>
-                          <a onClick={() => setDiscord(!showDiscord)}>
+                          <a
+                            onClick={() => {
+                              setDiscord(!showDiscord);
+                              if (showDiscord) setDiscordUser("");
+                            }}
+                          >
                             {showDiscord ? (
                               <Discord className="ml-3 w-8 h-8 text-orange-500" />
                             ) : (
                               <Discord className="ml-3 w-8 h-8 text-black-500" />
                             )}
                           </a>
-                          <a onClick={() => setMail(!showMail)}>
+                          <a
+                            onClick={() => {
+                              setMail(!showMail);
+
+                              if (showMail) setMailUser("");
+                            }}
+                          >
                             {showMail ? (
                               <Mail className="ml-5 w-8 h-8 text-orange-500" />
                             ) : (
@@ -266,7 +291,9 @@ export default function OrderDialog(props) {
                           name="messages"
                           placeholder="Write something"
                           value={message}
-                          onChange={(e)=>{setMessage(e.target.value)}}
+                          onChange={(e) => {
+                            setMessage(e.target.value);
+                          }}
                         ></textarea>
                         <button
                           className="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-orange-500 to-orange-500 font-medium text-gray-100 block transition duration-300"
