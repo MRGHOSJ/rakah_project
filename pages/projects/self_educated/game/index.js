@@ -40,6 +40,24 @@ export default function Game() {
             img="https://img.youtube.com/vi/kGNFG2U5jqo/default.jpg"
             url="https://www.youtube.com/watch?v=kGNFG2U5jqo"
           />
+          <DocumentSelf
+            title="SDL tutorial 12 - sound with SDL_mixer"
+            sub="This tutorial will teach you how can you use the SDL_mixer (obviously not all of the functions, because there are a lot, just the basics)."
+            img="https://img.youtube.com/vi/94pPyuS1E_M/default.jpg"
+            url="https://www.youtube.com/watch?v=94pPyuS1E_M"
+          />
+          <DocumentSelf
+            title="SDL Tutorial 9 SDL_ttf Tutorial: Rendering Text"
+            sub="This tutorial will teach you how can you use the SDL TTF Library."
+            img="https://img.youtube.com/vi/gBFqZ7A0TPA/default.jpg"
+            url="https://www.youtube.com/watch?v=gBFqZ7A0TPA"
+          />
+          <DocumentSelf
+            title="SDL tutorial 18 - make a simple menu (part 1)"
+            sub="This tutorial will teach you how can you implement a very simple menu"
+            img="https://img.youtube.com/vi/k-m0q_uVnno/default.jpg"
+            url="https://www.youtube.com/watch?v=k-m0q_uVnno"
+          />
         </div>
       </div>
       <Footer />

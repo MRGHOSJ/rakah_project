@@ -79,7 +79,7 @@ const PricingTuto = (props) => {
 
       <OrderDialog
         dialog={{
-          title:"Web app",
+          title:props.title,
           show: showModal,
           service: service,
           setShowModal: setShowModal,

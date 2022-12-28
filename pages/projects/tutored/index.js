@@ -42,7 +42,6 @@ export default function Home() {
             sub="Here you will find every pricing details on how to create a desktop app"
             level="2 nd"
             programingLanguage={["C++", "SQL"]}
-            coming_soon={true}
             href="tutored/desktop_app"
           />
 
