@@ -1,6 +1,6 @@
 import React from "react";
 import LogoVPN from "../../public/assets/Logo.svg";
-import LogoDiscord from "../../public/assets/icon/discord.svg";
+import LogoDiscord from "../../public/assets/Icon/discord.svg";
 const Footer = () => {
   return (
     <div className="bg-white-300 pt-44 pb-24">
