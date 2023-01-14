@@ -22,12 +22,12 @@ const Footer = () => {
             ©{new Date().getFullYear()} - Rakah Project
           </p>
           <p className="text-gray-400">✉️ rakahproject@gmail.com</p>
-          <p className="text-gray-400 hover:text-black-600">
+          {/* <p className="text-gray-400 hover:text-black-600">
             <a href="https://discord.gg/TXR9hDyGGS" target="_blank" className="flex">
               <LogoDiscord className="h-6 w-auto mb-6" />
               <span className="text-sm pt-1 pl-1">Join Rakah Project Discord Server</span>
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
