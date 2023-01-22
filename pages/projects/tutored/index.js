@@ -31,9 +31,18 @@ export default function Home() {
             image="https://cdni.iconscout.com/illustration/premium/thumb/game-controller-5950856-4947552.png"
             title="Controller"
             sub="Here you will find every pricing details on how to create your own controller with arduino"
-            level="1 nd"
+            level="1 st"
             programingLanguage={["Arduino", "C"]}
             href="tutored/controller"
+          />
+          
+          <ProjectCard
+            image="https://media.discordapp.net/attachments/966491148640211034/1066674081623195698/Delpan147_creating_a_coat_of_arm_da07385f-4117-4235-9d20-759ac4108130.png?width=663&height=663"
+            title="Coat of arms"
+            sub="Here you will find every pricing details on how to create a coat of arm"
+            level="1 st"
+            programingLanguage={["Illustrator", "Photoshop"]}
+            href="tutored/coat_of_arm"
           />
           <ProjectCard
             image="https://miro.medium.com/max/1200/0*A2DRAEH8pV4ARcO6.jpg"
@@ -61,6 +70,7 @@ export default function Home() {
             coming_soon={true}
             href="tutored/pidev"
           />
+          
         </div>
       </div>
 
