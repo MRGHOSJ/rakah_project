@@ -57,7 +57,7 @@ export default function Home() {
             title="Pidev"
             sub="Here you will find every pricing details on how to create a pidev project"
             level="3 rd"
-            programingLanguage={["Pidev"]}
+            programingLanguage={["Java"]}
             coming_soon={true}
             href="tutored/pidev"
           />

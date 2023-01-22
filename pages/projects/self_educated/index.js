@@ -50,7 +50,7 @@ export default function Home() {
             title="Pidev"
             sub="Here you will find every tips , tricks and the full guidelines on how to create a pidev project"
             level="3 rd"
-            programingLanguage={["Pidev"]}
+            programingLanguage={["Java"]}
             coming_soon={true}
             href="self_educated/pidev"
           />
