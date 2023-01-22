@@ -25,8 +25,15 @@ export default function Home() {
             sub="Here you will find every pricing details on how to create a game out of SDL and C"
             level="1 st"
             programingLanguage={["C", "SDL"]}
-            coming_soon={true}
             href="tutored/game"
+          />
+          <ProjectCard
+            image="https://cdni.iconscout.com/illustration/premium/thumb/game-controller-5950856-4947552.png"
+            title="Controller"
+            sub="Here you will find every pricing details on how to create your own controller with arduino"
+            level="1 nd"
+            programingLanguage={["Arduino", "C"]}
+            href="tutored/controller"
           />
           <ProjectCard
             image="https://miro.medium.com/max/1200/0*A2DRAEH8pV4ARcO6.jpg"
@@ -42,6 +49,7 @@ export default function Home() {
             sub="Here you will find every pricing details on how to create a desktop app"
             level="2 nd"
             programingLanguage={["C++", "SQL"]}
+            coming_soon={true}
             href="tutored/desktop_app"
           />
 

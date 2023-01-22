@@ -3,6 +3,7 @@ import OrderDialog from "./OrderDialog";
 
 const PricingTuto = (props) => {
   const [showModal, setShowModal] = useState(false);
+  const lengthGrid = props.services.length>=3?3:props.services.length
   const [service, setService] = useState({
     title: "",
     price: "",
@@ -16,8 +17,7 @@ const PricingTuto = (props) => {
         <p className="text-center text-md text-gray-700 dark:text-gray-400 mb-12">
           {props.title}
         </p>
-
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-x-12">
+        <div className={"grid lg:grid-cols-"+lengthGrid+" gap-6 lg:gap-x-12"}>
           {props.services.map((service) => {
             return (
               <div className="mb-6 lg:mb-0">
