@@ -8,7 +8,8 @@ const CONTACT_MESSAGE_FIELDS = {
   service: "Service",
   project: "Project",
   price: "Price",
-  currency: "currency",
+  currency: "Currency",
+  userRef: "User Reference By"
 };
 
 const generateEmailContent = (data) => {

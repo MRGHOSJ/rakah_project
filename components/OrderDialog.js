@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Toast from "./Toast";
 
 import Facebook from "../public/assets/Icon/facebook.svg";
 import Discord from "../public/assets/Icon/discord.svg";
 import Mail from "../public/assets/Icon/mail.svg";
 import { sendEmailForm } from "../lib/api";
+import TrustedUsers from "../trusted_users.json";
 
 export default function OrderDialog(props) {
+  const route = useRouter();
   const [showToast, setToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("");
@@ -18,7 +21,6 @@ export default function OrderDialog(props) {
   const [mailUser, setMailUser] = useState("");
   const [facebookUser, setFacebookUser] = useState("");
   const [message, setMessage] = useState("");
-
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let discordformat = /^((.+?)#\d{4})/;
   let facebookUserFormat =
@@ -96,11 +98,19 @@ export default function OrderDialog(props) {
   };
 
   let sendEmail = async () => {
+    let userRef = "";
     let subject =
       "Order For " +
       props.dialog.service.title +
       " Project:" +
       props.dialog.title;
+
+    let ref = route.query.ref;
+    if (ref) {
+      TrustedUsers.users.map((user) => {
+        if (user.ref == ref) userRef = user.name;
+      });
+    }
     let res = {
       project: props.dialog.title,
       service: props.dialog.service.title,
@@ -111,6 +121,7 @@ export default function OrderDialog(props) {
     if (mailUser) res.mailUser = mailUser;
     if (facebookUser) res.facebookUser = facebookUser;
     if (message) res.message = message;
+    if (userRef != "") res.userRef = userRef;
     let data = {
       subject: subject,
       html: res,
