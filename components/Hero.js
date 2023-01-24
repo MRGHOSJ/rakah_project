@@ -4,6 +4,8 @@ import ButtonPrimary from "./misc/ButtonPrimary";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Hero = ({
   listUser = [
@@ -25,7 +27,8 @@ const Hero = ({
   ],
 }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-
+  
+  const { query } = useRouter();
   return (
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
       <ScrollAnimationWrapper>
@@ -43,9 +46,17 @@ const Hero = ({
               Provide simple steps, guidelines, tips and tricks to create your
               own Rakah project. You can view our templates and free tutorials
             </p>
-            <a href="/projects">
+            
+            <Link
+              href={{
+                pathname: "/projects",
+                query: { ...query },
+              }}
+            >
+            <a>
               <ButtonPrimary>Get Started</ButtonPrimary>
             </a>
+            </Link>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>

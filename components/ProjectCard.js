@@ -1,4 +1,12 @@
+import { useRouter } from "next/router";
+
 const ProjectCard = (props) => {
+  
+  const { query } = useRouter();
+  let linkHref = props.href
+  if(query.ref){
+    linkHref = props.href + "?ref=" + query.ref; 
+  }
   return (
     <div className="w-80 h-full">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md h-full">
@@ -36,7 +44,7 @@ const ProjectCard = (props) => {
           </p>
           {props.coming_soon ? null : (
             <a
-              href={props.coming_soon ? "" : props.href}
+              href={props.coming_soon ? "" : linkHref}
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
             >
               {props.href.includes("tutored") ? "Order now" : "Explore"}

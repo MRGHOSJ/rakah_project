@@ -4,6 +4,7 @@ import Footer from "../../../components/Layout/Footer";
 import SeoHead from "../../../components/SeoHead";
 
 export default function Home() {
+  
   return (
     <>
       <SeoHead title="Rakah Project | Tutored" />
