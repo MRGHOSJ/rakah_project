@@ -28,6 +28,90 @@ const generateEmailContent = (data) => {
   };
 };
 
+async function sendDiscordMessage(data) {
+  const response = await fetch("https://discord.com/api/webhooks/1063431403980722217/"+process.env.DISCORD_WEBHOOK_KEY, {
+    method: "POST",
+    body: JSON.stringify({
+      embeds: [
+        {
+          type: "rich",
+          title: data.subject,
+          footer: {
+            text: Date(),
+          },
+          fields: [
+            {
+              name: "Project",
+              value: data.html.project,
+              inline: false,
+            },
+            {
+              name: "Service",
+              value: data.html.service,
+              inline: false,
+            },
+            {
+              name: "Price",
+              value: data.html.price + " " + data.html.currency,
+              inline: false,
+            },
+            data.html.discordUser?{
+              name: "Client Discord",
+              value: data.html.discordUser,
+              inline: false,
+            }:{
+              name: "Client Discord",
+              value: "null",
+              inline: false,
+            },
+            data.html.mailUser?{
+              name: "Client Mail",
+              value: data.html.mailUser,
+              inline: false,
+            }:{
+              name: "Client Mail",
+              value: "null",
+              inline: false,
+            },
+            data.html.facebookUser?{
+              name: "Client Facebook",
+              value: data.html.facebookUser,
+              inline: false,
+            }:{
+              name: "Client Facebook",
+              value: "null",
+              inline: false,
+            },
+            data.html.message?{
+              name: "Client Message",
+              value: data.html.message,
+              inline: false,
+            }:{
+              name: "Client Message",
+              value: "null",
+              inline: false,
+            },
+            data.html.userRef?{
+              name: "Client referenced by",
+              value: data.html.userRef,
+              inline: false,
+            }:{
+              name: "Client referenced by",
+              value: "null",
+              inline: false,
+            }
+          ],
+        },
+      ],
+  
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+}
+
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
@@ -36,6 +120,7 @@ const handler = async (req, res) => {
     }
 
     try {
+      await sendDiscordMessage(data)
       await transporter.sendMail({
         ...mailOptions,
         subject: data.subject,
