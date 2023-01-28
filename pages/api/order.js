@@ -1,4 +1,5 @@
 import { mailOptions, transporter } from "../../config/nodemailer";
+import { csrf } from '../../lib/csrf';
 
 const CONTACT_MESSAGE_FIELDS = {
   discordUser: "Discord",
@@ -136,4 +137,4 @@ const handler = async (req, res) => {
   }
   return res.status(400).json({ message: "Bad request" });
 };
-export default handler;
+export default csrf(handler);

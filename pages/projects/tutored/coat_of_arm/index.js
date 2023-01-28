@@ -2,7 +2,11 @@ import Header from "../../../../components/Layout/Header";
 import Footer from "../../../../components/Layout/Footer";
 import SeoHead from "../../../../components/SeoHead";
 import PricingTuto from "../../../../components/PricingTuto";
+import { setup } from "../../../../lib/csrf";
 
+export const getServerSideProps = setup(async ({req, res}) => {
+  return { props: {}}
+});
 export default function DesktopApp() {
   
   return (

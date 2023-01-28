@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
 import SeoHead from "../components/SeoHead";
+import { setup } from "../lib/csrf";
 
 export default function Home() {
   return (
@@ -17,3 +18,4 @@ export default function Home() {
     </>
   );
 }
+

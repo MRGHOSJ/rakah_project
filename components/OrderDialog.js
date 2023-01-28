@@ -8,6 +8,7 @@ import Mail from "../public/assets/Icon/mail.svg";
 import { sendEmailForm } from "../lib/api";
 import TrustedUsers from "../trusted_users.json";
 
+
 export default function OrderDialog(props) {
   const route = useRouter();
   const [showToast, setToast] = useState(false);
@@ -127,6 +128,8 @@ export default function OrderDialog(props) {
       html: res,
     };
     await sendEmailForm(data);
+
+    
   };
 
   return (
@@ -343,3 +346,5 @@ export default function OrderDialog(props) {
     </>
   );
 }
+
+

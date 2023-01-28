@@ -4,6 +4,7 @@ import SelfTought from "../../public/assets/selfTaught.png";
 import Tutored from "../../public/assets/tutored.png";
 import { Link } from "react-scroll";
 import { useRouter } from "next/router";
+
 export default function Projects() {
   
   const { query } = useRouter();
@@ -37,3 +38,4 @@ export default function Projects() {
     </>
   );
 }
+
