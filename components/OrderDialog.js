@@ -99,6 +99,7 @@ export default function OrderDialog(props) {
   };
 
   let sendEmail = async () => {
+    const token = await props.reRef.current.executeAsync();
     let userRef = "";
     let subject =
       "Order For " +
@@ -126,10 +127,10 @@ export default function OrderDialog(props) {
     let data = {
       subject: subject,
       html: res,
+      token
     };
     await sendEmailForm(data);
-
-    
+    props.reRef.current.reset();
   };
 
   return (

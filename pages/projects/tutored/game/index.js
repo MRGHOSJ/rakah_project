@@ -2,12 +2,15 @@ import Header from "../../../../components/Layout/Header";
 import Footer from "../../../../components/Layout/Footer";
 import SeoHead from "../../../../components/SeoHead";
 import PricingTuto from "../../../../components/PricingTuto";
+import ReCAPTCHA from "react-google-recaptcha";
 import { setup } from "../../../../lib/csrf";
+import { useRef } from "react";
 
 export const getServerSideProps = setup(async ({req, res}) => {
   return { props: {}}
 });
 export default function Webapp() {
+  const reRef = useRef();
   return (
     <>
       <SeoHead title="Rakah Project | Tutored" />
@@ -92,6 +95,12 @@ export default function Webapp() {
             ],
           },
         ]}
+        reRef={reRef}
+      />
+      <ReCAPTCHA
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        size="invisible"
+        ref={reRef}
       />
       <Footer />
     </>

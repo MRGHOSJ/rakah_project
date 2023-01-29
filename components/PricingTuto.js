@@ -84,6 +84,7 @@ const PricingTuto = (props) => {
           service: service,
           setShowModal: setShowModal,
         }}
+        reRef={props.reRef}
       />
     </div>
   );

@@ -2,12 +2,15 @@ import Header from "../../../../components/Layout/Header";
 import Footer from "../../../../components/Layout/Footer";
 import SeoHead from "../../../../components/SeoHead";
 import PricingTuto from "../../../../components/PricingTuto";
+import ReCAPTCHA from "react-google-recaptcha";
 import { setup } from "../../../../lib/csrf";
+import { useRef } from "react";
 
 export const getServerSideProps = setup(async ({req, res}) => {
   return { props: {}}
 });
-export default function DesktopApp() {
+export default function CoatOfArms() {
+  const reRef = useRef();
   
   return (
     <>
@@ -31,6 +34,13 @@ export default function DesktopApp() {
             ],
           },
         ]}
+        
+        reRef={reRef}
+      />
+      <ReCAPTCHA
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        size="invisible"
+        ref={reRef}
       />
       <Footer />
     </>

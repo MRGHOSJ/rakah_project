@@ -113,6 +113,18 @@ async function sendDiscordMessage(data) {
 
 }
 
+async function validateHuman(token){
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const response = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`,
+    {
+      method: "POST",
+    }
+  );
+  const data = await response.json();
+  return data.success;
+}
+
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
@@ -121,6 +133,11 @@ const handler = async (req, res) => {
     }
 
     try {
+      const validHuman = await validateHuman(data.token);
+
+      if(!validHuman)
+      return res.status(403).send({ message: "403 Forbidden" });
+
       await sendDiscordMessage(data)
       await transporter.sendMail({
         ...mailOptions,
