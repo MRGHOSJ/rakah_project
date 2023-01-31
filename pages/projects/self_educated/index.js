@@ -59,7 +59,6 @@ export default function Home() {
             level="2 nd"
             programingLanguage={["C++", "SQL"]}
             href="self_educated/desktop_app"
-            coming_soon={true}
           />
 
           <ProjectCard
