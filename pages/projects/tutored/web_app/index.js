@@ -20,7 +20,7 @@ export default function Webapp() {
         services={[
           {
             title: "CRUD",
-            price: "40",
+            price: "50",
             currency: "DT",
             pros: [
               "Create function",

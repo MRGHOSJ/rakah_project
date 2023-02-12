@@ -21,7 +21,7 @@ export default function CoatOfArms() {
         services={[
           {
             title: "Coat of arm",
-            price: "30",
+            price: "20",
             currency: "DT",
             pros: [
               "6 images (symbols/ animals/ objects/ shapes)",

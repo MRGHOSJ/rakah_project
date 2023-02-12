@@ -20,7 +20,7 @@ export default function Webapp() {
         services={[
           {
             title: "Menu",
-            price: "30",
+            price: "40",
             currency: "DT",
             pros: [
               "3 backgrounds (menu principal, options et jeu)",
@@ -36,7 +36,7 @@ export default function Webapp() {
           },
           {
             title: "Character",
-            price: "40",
+            price: "60",
             currency: "DT",
             pros: [
               "Character design (+20 DT)",
@@ -49,7 +49,7 @@ export default function Webapp() {
           },
           {
             title: "Background",
-            price: "40",
+            price: "50",
             currency: "DT",
             pros: [
               "Background design (+20 DT)",
@@ -62,7 +62,7 @@ export default function Webapp() {
           },
           {
             title: "Enemies",
-            price: "40",
+            price: "50",
             currency: "DT",
             pros: [
             "Secondary entity design (+20 DT)",
