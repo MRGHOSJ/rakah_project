@@ -69,7 +69,15 @@ const documents = [
             sub:"This tutorial will teach you how to add a google translator to your website by html ,css & javascript in english",
             img:"https://img.youtube.com/vi/vXZvAdS5tSM/default.jpg",
             url:"https://www.youtube.com/watch?v=vXZvAdS5tSM",
-  }
+  },
+  {
+    title: "HTML/JS Quiz",
+    document: "Quiz",
+    tags: ["Basic"],
+    sub: "This quiz will help you grasp the basics about coding in Html and javascript",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079482037104291960/image.png",
+    url: "https://forms.gle/58M1FvZuk3gEyehUA",
+  },
 ]
 
 export default function WebApp() {

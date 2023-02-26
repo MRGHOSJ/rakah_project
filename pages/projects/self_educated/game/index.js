@@ -67,7 +67,7 @@ const documents = [
     document: "Quiz",
     tags: ["Basic"],
     sub: "This quiz will help you grasp everything about the SDL menu.",
-    img: "https://cdn.discordapp.com/attachments/864587916076646401/1077747202144874616/image.png",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079482653260120194/image.png",
     url: "https://forms.gle/CE6Bz7rkfbd2DH3B6",
   },
   {
@@ -75,7 +75,7 @@ const documents = [
     document: "Quiz",
     tags: ["Basic"],
     sub: "This quiz will help you grasp everything about the SDL menu. Part 2",
-    img: "https://media.discordapp.net/attachments/929827215791779890/1079474494734880848/image.png",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079482818276626522/image.png",
     url: "https://forms.gle/XEdWBoxfKftXSwRf6",
   },
   {
@@ -83,7 +83,7 @@ const documents = [
     document: "Quiz",
     tags: ["Basic"],
     sub: "This quiz will help you grasp everything about the SDL menu. Part 3",
-    img: "https://media.discordapp.net/attachments/929827215791779890/1079473959424233533/image.png",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079482371587444888/image.png",
     url: "https://forms.gle/Xkajf4rReED9PCtcA",
   },
 ];
