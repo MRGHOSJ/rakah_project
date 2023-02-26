@@ -65,10 +65,26 @@ const documents = [
   {
     title: "SDL 1.2 Quiz",
     document: "Quiz",
-    tags: ["Menu"],
+    tags: ["Basic"],
     sub: "This quiz will help you grasp everything about the SDL menu.",
     img: "https://cdn.discordapp.com/attachments/864587916076646401/1077747202144874616/image.png",
     url: "https://forms.gle/CE6Bz7rkfbd2DH3B6",
+  },
+  {
+    title: "SDL 1.2 Quiz Part 2",
+    document: "Quiz",
+    tags: ["Basic"],
+    sub: "This quiz will help you grasp everything about the SDL menu. Part 2",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079474494734880848/image.png",
+    url: "https://forms.gle/XEdWBoxfKftXSwRf6",
+  },
+  {
+    title: "SDL 1.2 Quiz Part 3",
+    document: "Quiz",
+    tags: ["Basic"],
+    sub: "This quiz will help you grasp everything about the SDL menu. Part 3",
+    img: "https://media.discordapp.net/attachments/929827215791779890/1079473959424233533/image.png",
+    url: "https://forms.gle/Xkajf4rReED9PCtcA",
   },
 ];
 
