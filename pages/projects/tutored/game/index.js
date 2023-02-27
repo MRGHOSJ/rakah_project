@@ -73,7 +73,7 @@ export default function Webapp() {
           },
           {
             title: "Enigme",
-            price: "30",
+            price: "40",
             currency: "DT",
             pros: [
               "Enigme design (+20 DT)",
@@ -84,7 +84,7 @@ export default function Webapp() {
           },
           {
             title: "Minimap",
-            price: "40",
+            price: "50",
             currency: "DT",
             pros: [
               "Minimmap design (+20 DT)",
