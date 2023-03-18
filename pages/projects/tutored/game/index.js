@@ -41,7 +41,6 @@ export default function Webapp() {
             pros: [
               "Character design (+20 DT)",
               "Character initialize",
-              "Display character (img, score, life)",
               "Move acceleration",
               "Character animation",
               "Character jump",
@@ -55,9 +54,9 @@ export default function Webapp() {
               "Background design (+20 DT)",
               "Background initialize",
               "Display background (img, score)",
-              "2 background animation (opening, closing door, / flower …)",
-              "Pixel-perfect collision",
-              "4-way scrolling"
+              "Background animation (opening, closing door, / flower …)",
+              "4-way scrolling",
+              "Best score"
             ],
           },
           {
@@ -91,7 +90,7 @@ export default function Webapp() {
               "Minimmap initialize",
               "Display character in minimap",
               "Time management (riddle, game)",
-              "Best score"
+              "collision perfect pixel"
             ],
           },
         ]}

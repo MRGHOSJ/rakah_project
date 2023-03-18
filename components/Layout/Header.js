@@ -122,6 +122,17 @@ const Header = (props) => {
                     Projects
                   </a>
                 </Link>
+                
+                <Link
+                  href={{
+                    pathname: "/stickers",
+                    query: { ...query },
+                  }}
+                >
+                  <a className="px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500">
+                    Stickers
+                  </a>
+                </Link>
               </>
             ) : (
               <>
@@ -188,6 +199,16 @@ const Header = (props) => {
                 >
                   <a className="px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500">
                     Projects
+                  </a>
+                </Link>
+                <Link
+                  href={{
+                    pathname: "/stickers",
+                    query: { ...query },
+                  }}
+                >
+                  <a className="px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500">
+                    Stickers
                   </a>
                 </Link>
               </>
