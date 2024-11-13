@@ -17,7 +17,7 @@ export default function DesktopApp() {
       <SeoHead title="Rakah Project | Tutored" />
       <Header location="insideOfPorjectsTutored" />
       <PricingTuto
-        title="Dekstop Application (QT)"
+        title="Mobile Application (Flutter Flow)"
         services={[
           {
             title: "CRUD",
@@ -38,26 +38,13 @@ export default function DesktopApp() {
             currency: "DT(each one)",
             pros: [
               "Mail (20 DT)",
-              "SMS (20 DT)",
               "Forgot password (20 DT)",
               "Sorting (10 DT)",
-              "Paging (10 DT)",
               "Search (10 DT)",
-              "Statistical (10 DT)",
-              "Translation (10 DT)",
-              "Pdf (10 DT)",
               "Login (10 DT)",
-              "Sum (10 DT)",
-              "Data Export (10 DT)", // Metier
               "User Authentication (10 DT)", // Metier
-              "Forecasting (30 DT)", // AI
-              "Geo-Location (20 DT)", // API/Advanced Metier
               "Currency Conversion (20 DT)", // API/Advanced Metier
-              "Calendar Integration (10 DT)", // Metier
-              "Data Encryption (20 DT)", // API/Advanced Metier
               "Weather API Integration (20 DT)", // API/Advanced Metier
-              "Recommendation Engine (30 DT)", // AI
-              "QRcode Scanning (20 DT)",
             ],
           },
           {

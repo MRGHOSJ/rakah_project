@@ -17,7 +17,7 @@ export default function DesktopApp() {
       <SeoHead title="Rakah Project | Tutored" />
       <Header location="insideOfPorjectsTutored" />
       <PricingTuto
-        title="Dekstop Application (QT)"
+        title="Web Application (Symfony)"
         services={[
           {
             title: "CRUD",
